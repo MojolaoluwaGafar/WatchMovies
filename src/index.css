@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  font-family: "Roboto", serif;
+}
+.header{
+  height: 80px;
+
+}
+.headerlinks{
+  display: inline-block;
+  margin: auto;
+}
+.headerlinks a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.signinbtn{
+  color: #ffffff;
+  background-color: #008080;
+}
+/* .mobile-menu {
+  animation: slideDown 0.3s ease-in-out;
+} */
+ .mobile-menu {
+  z-index: 20; /* Keeps menu above overlay */
+  overflow-y: auto; /* Allows scrolling if the menu content is tall */
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu a {
+  color: #b3b3b3;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: capitalize;
+  display: block;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.mobile-menu a:hover {
+  color: #ffffff;
+}
+
+.forminput{
+  height: 35px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-color: #008080;
+}
+.form{
+  position: relative;
+}
+.search{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: #008080;
+}
+.forminput::placeholder{
+   color: #b3b3b3;
+  padding-left: 5px;
+}
+
+.homepage{
+  background-color: #121212;
+}
+.herobtn{
+  background-color: #008080;
+  color: #FFFFFF;
+}
+.herobtn:hover{
+  background-color: #ffffff;
+  color: #008080;
+}
