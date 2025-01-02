@@ -155,11 +155,23 @@ import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { headerLinks } from "../../data";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false); // User's login state
+    const [searchTerm, setSearchTerm] = useState("");
+    const navigate = useNavigate();
 
+    const handleSearch = (e) => {
+      e.preventDefault();
+
+      if (!searchTerm.trim()) return;
+
+      // Navigate to the search results page with the search query
+      navigate(`/search?q=${encodeURIComponent(searchTerm)}`);
+      setSearchTerm("");
+    };
   return (
     <header className="header">
       <nav className="container d-flex justify-content-between py-4">
@@ -198,12 +210,17 @@ const Header = () => {
               </Link>
             )}
           </div>
-          <form className="form d-flex align-items-center">
+          <form
+            className="form d-flex align-items-center"
+            onSubmit={handleSearch}
+          >
             <input
               className="form-input bg-transparent border rounded-4 px-3 py-1 text-light"
               type="text"
               placeholder="Search"
               aria-label="Search movies"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
             <button
               className="bg-transparent border-0 ms-2 search"
@@ -234,13 +251,13 @@ const Header = () => {
             &times;
           </button>
           {headerLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
-              href={link.href}
+              to={link.to}
               className="text-decoration-none text-light d-block mb-3 fs-5"
             >
               {link.linkName}
-            </a>
+            </Link>
           ))}
         </div>
 

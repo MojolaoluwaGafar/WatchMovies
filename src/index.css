@@ -81,3 +81,83 @@
   background-color: #ffffff;
   color: #008080;
 }
+
+.watchlist-page {
+  min-height: 100vh;
+  background-color: #121212;
+  padding-top: 20px;
+}
+
+.movie-card {
+  border: 1px solid #444;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.movie-grid {
+  display: flex;
+  gap: 16px;
+}
+.movie-card-img {
+  border-radius: 8px 8px 0 0;
+}
+
+.movie-card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-watchlist {
+  margin-top: 50px;
+}
+
+.empty-watchlist p {
+  color: #aaa;
+  font-size: 1.25rem;
+}
+
+.btn-primary {
+  background-color: #008080;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #005959;
+}
+.bg-dark{
+  background-color: #121212;
+}
+.color-teal{
+  color: #005959;
+}
+.bg-teal{
+  background-color: #008080
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: none;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}

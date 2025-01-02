@@ -44,7 +44,8 @@ const MovieDetailsPage = () => {
             {Array(8)
               .fill(0)
               .map((_, index) => (
-                <div className="cast-member text-center" key={index}>
+                <div className="cast-membe
+                \r text-center" key={index}>
                   <img
                     src="https://via.placeholder.com/100x100"
                     alt="Cast Member"

@@ -1,7 +1,6 @@
-import React from 'react'
-import { moviesData } from '../../data'
+import React from "react";
 
-const MovieCard = ({title, imageUrl, rating}) => {
+const MovieCard = ({ title, imageUrl, rating }) => {
   return (
     <div>
       <div className="movie-card">
@@ -18,18 +17,17 @@ const MovieCard = ({title, imageUrl, rating}) => {
         />
         <div className="movie-info text-center mt-3">
           <h5 className="movie-title text-light">{title}</h5>
-          <p className="movie-rating text-warning">
-            <span className="me-1">⭐</span>
-            {rating}/5
-          </p>
-          <button className="btn herobtn btn-sm mt-2">
-            Add to Watchlist
-          </button>
+          {rating && (
+            <p className="movie-rating text-warning">
+              <span className="me-1">⭐</span>
+              {rating}
+            </p>
+          )}
+          <button className="btn herobtn btn-sm mt-2">Add to Watchlist</button>
         </div>
       </div>
-      )
     </div>
   );
-}
+};
 
-export default MovieCard
+export default MovieCard;
